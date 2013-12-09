@@ -1,0 +1,848 @@
+<!--[if lte IE 8]>         <html class="no-js lte-ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Component Guide | NYC Camp Style Prototype</title>
+
+<meta name="viewport" content="initial-scale=1.0">
+
+<!-- Prototype CSS -->
+<link rel="stylesheet" href="/page/css/prototype.css">
+
+
+  <!-- Prism CSS -->
+  <link rel="stylesheet" href="/page/bower_components/prism/themes/prism-okaidia.css">
+
+
+<!-- Async Webfonts -->
+
+
+
+
+<!-- Modernizr stays in the head -->
+<script src="/page/bower_components/modernizr/modernizr.js"></script>
+  </head>
+
+  <body>
+    <div id="prototype-section--header">
+      <div class="content-wrapper">
+        <header>
+  <div class="inner-wrapper">
+    <div id="client-id">
+      
+        <h1 class="client-name">NYC Camp</h1>
+      
+    </div>
+    <aside id="page-id">
+      <h2 class="section-name">Component Guide</h2>
+      <div class="page-info">
+        <p>Version 0.0.0</p>
+      </div>
+    </aside>
+  </div>
+  <nav id="prototype-nav" role="navigation">
+    <b data-menu-toggle="closed">menu</b>
+    <div role="menubar">
+      
+<a href="/page/content" role="menuitem">Content Strategy</a>
+<a href="/page/style-tile" role="menuitem">Style Tile</a>
+<a href="/page/elements" role="menuitem">Elements</a>
+<a href="/page/components" role="menuitem">Components</a>
+<a href="/page/colors" role="menuitem">Colors</a>
+    </div>
+  </nav>
+  <script type="text/javascript">
+    
+    
+    !function(){function d(a){var b=a.target.getAttribute("data-menu-toggle");"closed"===b?a.target.setAttribute("data-menu-toggle","open"):a.target.setAttribute("data-menu-toggle","closed")}for(var a=document.querySelectorAll("b[data-menu-toggle]"),b=a.length,c=0;b>c;c++)a[c].addEventListener("click",d)}();
+  </script>
+</header>
+
+      </div>
+    </div>
+
+    <main id="prototype-section--main">
+      <div class="content-wrapper">
+        
+
+<article class="prototype--a11y">
+  <header>
+    <h2>Accessibility</h2>
+  </header>
+  <div class="component-group--a11y">
+  
+    <details>
+  <summary>Sass Mixin Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Accessibility Component Mixins
+//////////////////////////////
+
+//////////////////////////////
+// A11y Default Variables
+$a11y-hidden-base-extend: true !default;
+$a11y-focusable-default: false !default;
+//////////////////////////////
+
+@mixin a11y-hidden($a11y-focusable: $a11y-focusable-default, $extend: $a11y-hidden-base-extend) {
+  @if $extend {
+    @if $a11y-focusable {
+      @extend %a11y-hidden-focusable-extend;
+    }
+    @else {
+      @extend %a11y-hidden-base-extend;
+    }
+  }
+  @else {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    @if $a11y-focusable {
+      &:active, &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+      }
+    }
+  }
+}
+
+</code></pre>
+</details><details>
+  <summary>Sass Extend Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Accessibility Component Extendable Classes
+//////////////////////////////
+
+$a11y-extendables-extended: false !default;
+
+@if not ($a11y-extendables-extended) {
+  %hidden {
+    display: none;
+  }
+
+  %a11y-hidden-base-extend {
+    @include a11y-hidden($extend: false);
+  }
+
+  %a11y-hidden-focusable-extend {
+    @include a11y-hidden($a11y-focusable: true, $extend: false);
+  }
+}
+
+$a11y-extendables-extended: true;</code></pre>
+</details>
+  
+  <ul component-list>
+    <li>
+      <p><strong>Invisible Element</strong></p>
+      <!-- Component: a11y,  Type: Element Invisible -->
+<h2 class="a11y--element-invisible">Any content placed in a container with this class will be hidden in view but available to screen readers</h2>
+
+      
+        <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: a11y,  Type: Element Invisible --&gt;
+&lt;h2 class="a11y--element-invisible"&gt;Any content placed in a container with this class will be hidden in view but available to screen readers&lt;/h2&gt;</code></pre>
+</details>
+        <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Hides an element from view, preserves it for screen readers
+.a11y--element-invisible {
+  @extend %a11y-hidden-base-extend;
+}
+</code></pre>
+</details>
+      
+    </li>
+    <li>
+      <p><strong>Invisible Element, Focusable</strong></p>
+      <!-- Component: a11y,  Type: Element Focusable -->
+<h2 class="a11y--element-focusable" tabindex="0">Any content placed in a container with this class will be hidden in view but focusable for a keyboard</h2>
+
+      
+        <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: a11y,  Type: Element Focusable --&gt;
+&lt;h2 class="a11y--element-focusable" tabindex="0"&gt;Any content placed in a container with this class will be hidden in view but focusable for a keyboard&lt;/h2&gt;</code></pre>
+</details>
+        <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Hides an element from view, allows it to be focusable
+.a11y--element-focusable {
+  @extend %a11y-hidden-focusable-extend;
+}
+</code></pre>
+</details>
+      
+    </li>
+  </ul>
+</div>
+</article>
+
+<article class="prototype--messaging">
+  <header>
+    <h2>Messages</h2>
+  </header>
+  <div class="component-group--message">
+
+  
+    <details>
+  <summary>Sass Mixin Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Message Component Mixins
+//////////////////////////////
+
+//////////////////////////////
+// Messages Component Default Variables
+$message-base-extend: true !default;
+$message-colors-extend: true !default;
+$message-color-adjust: 10% !default;
+$message-text-color-default: $cs-message-text-color-default !default;
+$message-bkg-color-default: $cs-message-bkg-color-default !default; // false
+//////////////////////////////
+
+@mixin message-base($extend: $message-base-extend) {
+  @if $extend {
+    @extend %message-base-extend;
+  }
+  @else {
+    padding: 0.2em 0.5em;
+    border: {
+      style: solid;
+      width: .15em;
+      radius: .25em;
+    }
+  }
+}
+
+@mixin message-colors($message-color: $message-bkg-color-default, $message-adjust: $message-color-adjust,  $extend: $message-colors-extend) {
+  @if ($message-color != $message-bkg-color-default) {
+    $extend: false;
+  }
+  @if $extend {
+    @extend %message-colors-extend;
+  }
+  @else {
+    @include readable-text($message-color);
+
+    @if cs-is-dark($message-color) {
+      background-color: blend-screen($message-color, adjust-color($message-color, $lightness: $message-adjust * -1));
+
+      border-color: blend-screen($message-color, adjust-color($message-color, $lightness: $message-adjust * -2.5));
+    }
+    @else {
+      background-color: blend-multiply($message-color, adjust-color($message-color, $lightness: $message-adjust * -1));
+
+      border-color: blend-multiply($message-color, adjust-color($message-color, $lightness: $message-adjust * -2.5));
+    }
+  }
+}
+
+</code></pre>
+</details><details>
+  <summary>Sass Extend Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Message Component Extendable Classes
+//////////////////////////////
+
+$message-extendables-extended: false !default;
+
+@if not ($message-extendables-extended) {
+  %message-base-extend {
+    @include message-base(false);
+  }
+  %message-colors-extend {
+    @include message-colors($cs-status-status, $extend: false);
+  }
+
+  %message {
+    @extend %message-base-extend;
+    @extend %message-colors-extend;
+  }
+  %status {
+    @include message-colors($cs-status-status);
+  }
+  %warning {
+    @include message-colors($cs-status-warning);
+  }
+  %error {
+    @include message-colors($cs-status-error);
+  }
+}
+
+$message-extendables-extended: true;</code></pre>
+</details>
+  
+  <ul component-list>
+    
+      <li>
+        <!-- Component: Message,  Type: Status -->
+<div class="message status">
+  <h2 class="a11y--element-invisible">Status message</h2>
+  <p>This is a <em>status</em> message</p>
+</div>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Message,  Type: Status --&gt;
+&lt;div class="message status"&gt;
+  &lt;h2 class="a11y--element-invisible"&gt;Status message&lt;/h2&gt;
+  &lt;p&gt;This is a &lt;em&gt;status&lt;/em&gt; message&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Styling for Message Component
+.message {
+  @extend %message;
+}
+
+// Status styling for Message Component
+.message.status {
+  @extend %status;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+      <li>
+        <!-- Component: Message,  Type: Warning -->
+<div class="message warning">
+  <h2 class="a11y--element-invisible">Warning message</h2>
+  <p>This is a <em>warning</em> message</p>
+</div>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Message,  Type: Warning --&gt;
+&lt;div class="message warning"&gt;
+  &lt;h2 class="a11y--element-invisible"&gt;Warning message&lt;/h2&gt;
+  &lt;p&gt;This is a &lt;em&gt;warning&lt;/em&gt; message&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Styling for Message Component
+.message {
+  @extend %message;
+}
+
+// Warning styling for Message Component
+.message.warning {
+  @extend %warning;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+      <li>
+        <!-- Component: Message,  Type: Error -->
+<div class="message error">
+  <h2 class="a11y--element-invisible">Error message</h2>
+  <p>This is a <em>error</em> message</p>
+</div>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Message,  Type: Error --&gt;
+&lt;div class="message error"&gt;
+  &lt;h2 class="a11y--element-invisible"&gt;Error message&lt;/h2&gt;
+  &lt;p&gt;This is a &lt;em&gt;error&lt;/em&gt; message&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Styling for Message Component
+.message {
+  @extend %message;
+}
+
+// Error styling for Message Component
+.message.error {
+  @extend %error;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+  </ul>
+</div>
+</article>
+
+<article class="prototype--buttons">
+  <header>
+    <h2>Buttons</h2>
+  </header>
+  <div class="component-group--button">
+
+  
+    <details>
+  <summary>Sass Mixin Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Button Component Mixins
+//////////////////////////////
+
+//////////////////////////////
+// Button Component Default Variables
+$button-base-extend: true !default;
+$button-size-normal-extend: true !default;
+$button-size-large-extend: true !default;
+$button-colors-extend: true !default;
+$button-color-default: $cs-button-color-default !default;
+$button-color-adjust: 20% !default;
+$button-text-color-default: false !default;
+//////////////////////////////
+
+
+@mixin button-base($extend: $button-base-extend) {
+  @if $extend {
+    @extend %button-base-extend;
+  }
+  @else {
+    display: inline-block;
+    border-radius: 0.25em;
+    border: none;
+    font: {
+      family: $font-sans;
+      weight: normal;
+    }
+    text: {
+      transform: uppercase;
+      decoration: none;
+    }
+  }
+}
+
+@mixin button-size-normal($extend: $button-size-normal-extend) {
+  @if $extend {
+    @extend %button-size-normal-extend;
+  }
+  @else {
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+    line-height: 1.25;
+  }
+}
+
+@mixin button-size-large($extend: $button-size-large-extend) {
+  @if $extend {
+    @extend %button-size-large-extend;
+  }
+  @else {
+    padding: 0.5em 0.75em;
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
+
+@mixin button-background($button-color: $button-color-default, $button-text-color: $button-text-color-default, $button-adjust: $button-color-adjust) {
+
+  @if $button-text-color == false {
+    @include readable-text($button-color);
+  }
+
+  @if cs-is-dark($button-color) {
+    background-color: blend-screen($button-color, adjust-color($button-color, $lightness: $button-adjust * -1));
+  }
+  @else {
+    background-color: blend-multiply($button-color, adjust-color($button-color, $lightness: $button-adjust * -1));
+  }
+}
+
+@mixin button-hover($button-color: $button-color-default, $button-text-color: $button-text-color-default, $button-adjust: $button-color-adjust) {
+  @if cs-is-dark($button-color) {
+    &:hover {
+      background-color: blend-screen($button-color, adjust-color($button-color, $lightness: $button-adjust * -.25));
+    }
+  }
+  @else {
+    &:hover {
+      background-color: blend-multiply($button-color, adjust-color($button-color, $lightness: $button-adjust * -.25));
+    }
+  }
+}
+
+@mixin button-active($button-color: $button-color-default, $button-text-color: $button-text-color-default, $button-adjust: $button-color-adjust) {
+  @if cs-is-dark($button-color) {
+    &:active {
+        background-color: blend-screen($button-color, adjust-color($button-color, $lightness: $button-adjust * 1));
+      }
+  }
+  @else {
+    &:active {
+        background-color: blend-multiply($button-color, adjust-color($button-color, $lightness: $button-adjust * 1));
+      }
+  }
+}
+
+
+@mixin button-colors($button-color: $button-color-default, $button-text-color: $button-text-color-default, $button-adjust: $button-color-adjust,  $extend: $button-colors-extend) {
+  @if ($button-color != $button-color-default) or ($button-text-color != $button-text-color-default) {
+    $extend: false;
+  }
+  @if $extend {
+    @extend %button-colors-extend;
+  }
+  @else {
+    @include button-background($button-color, $button-text-color, $button-adjust);
+    @include button-hover($button-color, $button-text-color, $button-adjust);
+    @include button-active($button-color, $button-text-color, $button-adjust);
+  }
+}
+
+</code></pre>
+</details><details>
+  <summary>Sass Extend Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Button Component Extendable Classes
+//////////////////////////////
+
+$button-extendables-extended: false !default;
+
+@if not ($button-extendables-extended) {
+  %button-base-extend {
+    @include button-base(false);
+  }
+  %button-size-normal-extend {
+    @include button-size-normal(false);
+  }
+
+  %button-size-large-extend {
+    @include button-size-large(false);
+  }
+
+  %button-colors-extend {
+    @include button-colors($extend: false);
+  }
+  %button {
+    @include button-base(true);
+    @include button-size-normal(true);
+    @include button-colors($gray, $extend: true);
+  }
+  %button-warning {
+    @extend %warning;
+    @include button-hover($cs-status-warning);
+    @include button-active($cs-status-warning);
+  }
+  %button-big {
+    @include button-base(true);
+    @include button-size-large(true);
+    @include button-colors(nth($quaternary-tints, 6), $extend: true);
+  }
+  %button-cta {
+    @include button-base(true);
+    @include button-size-normal(true);
+    @include button-colors($button-color: nth($primary-shades, 4));
+  }
+}
+
+$button-extendables-extended: true;</code></pre>
+</details>
+  
+  <ul component-list>
+    
+      <li>
+        <!-- Component: Button,  Type: Call to Action -->
+<a class="button call-to-action" href="#">Call to Action</a>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Button,  Type: Call to Action --&gt;
+&lt;a class="button call-to-action" href="#"&gt;Call to Action&lt;/a&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Call to Action styling for Button Component
+.call-to-action {
+  @extend %button-cta;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+      <li>
+        <!-- Component: Button,  Type: Big Button -->
+<a class="button big-button" href="#">Big Button</a>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Button,  Type: Big Button --&gt;
+&lt;a class="button big-button" href="#"&gt;Big Button&lt;/a&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Big Button styling for Button Component
+.big-button {
+  @extend %button-big;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+      <li>
+        <!-- Component: Button,  Type: Warning Button -->
+<a class="button big-button warning" href="#">Warning Button</a>
+
+        
+          <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Button,  Type: Warning Button --&gt;
+&lt;a class="button big-button warning" href="#"&gt;Warning Button&lt;/a&gt;</code></pre>
+</details>
+          <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Warning Button styling for Button Component
+.big-button.warning {
+  @extend %button-warning;
+}
+</code></pre>
+</details>
+        
+      </li>
+    
+  </ul>
+</div>
+</article>
+
+<article class="prototype--pagers">
+  <header>
+    <h2>Pagers</h2>
+  </header>
+  <div class="component-group--pager">
+  
+    <details>
+  <summary>Sass Mixin Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Pager Component Mixins
+//////////////////////////////
+
+//////////////////////////////
+// Pager Component Default Variables
+$pager-container-extend: true !default;
+$pager-item-extend: true !default;
+//////////////////////////////
+
+@mixin pager-container($extend: $pager-container-extend) {
+  @if $extend {
+    @extend %pager-container-extend;
+  }
+  @else {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+@mixin pager-item($extend: $pager-item-extend) {
+  @if $extend {
+    @extend %pager-item-extend;
+  }
+  @else {
+    display: inline;
+    margin: 0;
+    padding: 0.2em 0.5em;
+    text-transform: uppercase;
+  }
+}
+
+</code></pre>
+</details><details>
+  <summary>Sass Extend Source</summary>
+  <pre class="example"><code class="language-scss">//////////////////////////////
+// Pager Mixin Extendable Classes
+//////////////////////////////
+
+$pager-extendables-extended: false !default;
+
+@if not ($pager-extendables-extended) {
+  %pager-container-extend {
+    @include pager-container(false);
+  }
+  %pager-item-extend {
+    @include pager-item(false);
+  }
+
+  %pager {
+    @extend %pager-container-extend;
+  }
+  %pager-item {
+    @extend %pager-item-extend;
+  }
+}
+
+$pager-extendables-extended: true;</code></pre>
+</details>
+  
+  <ul component-list>
+    <li>
+      <!-- Component: Pager,  Type: Full -->
+<ul class="pager">
+  <li class="pager-first">
+    <a href="#" title="Go to the first page"> « First</a>
+  </li>
+  <li class="pager-previous">
+    <a href="#" title="Go to the previous page"> ‹ Previous</a>
+  </li>
+  <li class="pager-item">
+    <a href="#" title="Go to page 1">1</a>
+  </li>
+  <li class="pager-item">
+    <a href="#" title="Go to page 2">2</a>
+  </li>
+  <li class="pager-item">
+    <a href="#" title="Go to page 3">3</a>
+  </li>
+  <li class="pager-next">
+    <a href="#" title="Go to the next page"> Next ›</a>
+  </li>
+  <li class="pager-last">
+    <a href="#" title="Go to the last page"> Last »</a>
+  </li>
+</ul>
+
+      
+        <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Pager,  Type: Full --&gt;
+&lt;ul class="pager"&gt;
+  &lt;li class="pager-first"&gt;
+    &lt;a href="#" title="Go to the first page"&gt; « First&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-previous"&gt;
+    &lt;a href="#" title="Go to the previous page"&gt; ‹ Previous&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-item"&gt;
+    &lt;a href="#" title="Go to page 1"&gt;1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-item"&gt;
+    &lt;a href="#" title="Go to page 2"&gt;2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-item"&gt;
+    &lt;a href="#" title="Go to page 3"&gt;3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-next"&gt;
+    &lt;a href="#" title="Go to the next page"&gt; Next ›&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-last"&gt;
+    &lt;a href="#" title="Go to the last page"&gt; Last »&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</details>
+        <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Styling for Pager Component
+.pager {
+  @extend %pager;
+}
+.pager-first {
+  @extend %pager-item;
+}
+.pager-previous {
+  @extend %pager-item;
+}
+.pager-item {
+  @extend %pager-item;
+}
+.pager-next {
+  @extend %pager-item;
+}
+.pager-last {
+  @extend %pager-item;
+}
+
+</code></pre>
+</details>
+      
+    </li>
+    <li>
+      <!-- Component: Pager,  Type: Mini -->
+<ul class="pager">
+  <li class="pager-previous">
+    <a href="#" title="Go to the previous page"> ‹ Previous</a>
+  </li>
+  <li class="pager-next">
+    <a href="#" title="Go to the next page"> Next ›</a>
+  </li>
+</ul>
+
+      
+        <details>
+  <summary>HTML Source</summary>
+  <pre class="example"><code class="language-markup">&lt;!-- Component: Pager,  Type: Mini --&gt;
+&lt;ul class="pager"&gt;
+  &lt;li class="pager-previous"&gt;
+    &lt;a href="#" title="Go to the previous page"&gt; ‹ Previous&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pager-next"&gt;
+    &lt;a href="#" title="Go to the next page"&gt; Next ›&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</details>
+        <details>
+  <summary>Sass Source</summary>
+  <pre class="example"><code class="language-scss">// Styling for Pager Component
+.pager {
+  @extend %pager;
+}
+.pager-first {
+  @extend %pager-item;
+}
+.pager-previous {
+  @extend %pager-item;
+}
+.pager-item {
+  @extend %pager-item;
+}
+.pager-next {
+  @extend %pager-item;
+}
+.pager-last {
+  @extend %pager-item;
+}
+
+</code></pre>
+</details>
+      
+    </li>
+  </ul>
+</div>
+</article>
+      </div>
+    </main>
+
+    <!-- JavaScript goes in the footer! -->
+    <script src="/page/bower_components/responsive-indicator/dist/responsive-indicator.min.js"></script>
+
+
+    <!-- Prism JavaScript -->
+    <script src="/page/bower_components/prism/prism.js"></script>
+    <script src="/page/bower_components/prism/components/prism-scss.min.js"></script>
+    <!-- Polyfill for Details element -->
+    <script src="/page/bower_components/Element.details/__COMPILE/Element.details.js"></script>
+
+
+
+
+  </body>
+</html>
