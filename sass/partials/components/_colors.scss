@@ -1,0 +1,30 @@
+//
+// COLOR SWATCHES ========================
+//
+.base--swatch {
+    display: block;
+    height: 4em;
+    margin-bottom: 0.2em;
+    width: 100%;
+}
+
+.base--colors li {
+    float: left;
+    width: 5em;
+}
+
+.base--colors li {
+    border: 1px solid $border-color-light;
+    margin: 0 0.2em 0.2em 0;
+    overflow: hidden;
+    padding: 0.3em;
+}
+
+.base--colors li {
+    float: left;
+    width: 5em;
+}
+
+.base--swatch--label {
+    font-size: 10px;
+}

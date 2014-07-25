@@ -1,0 +1,45 @@
+//
+// COLORS ========================
+//
+
+// Background colors solid
+$main-color-base: #5091CD;
+$main-color-dark: #023E6B;
+$main-color-light: #A7C8E6;
+$main-color-extralight: #E6EEFF;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: #999999;
+
+// Background colors gradient
+// ...TBD if necessary
+
+// Text colors
+$text-color-dark: #303133;
+$text-color-medium: #666F80;
+$text-color-light: #EFF0F2;
+
+// Link colors
+$text-link-color: #5091CD;
+
+// Border colors
+$border-color-light: #CCCCCC;
+$border-color-dark: #666666;
+
+
+
+//
+// MODULAR SCALE ========================
+//
+
+$ms-base: 1em;
+$ms-ratio: $augmented-fourth; // 1.414
+
+$ms-xsmall: ms(-2);
+$ms-small: ms(-1);
+$ms-norm: ms(0); // base
+$ms-med: ms(1);
+$ms-lrg: ms(2);
+$ms-xlrg: ms(3);
+$ms-xxlrg: ms(4);
+$ms-xxxlrg: ms(5);
