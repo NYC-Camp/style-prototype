@@ -40,11 +40,13 @@ $browser-minimum-versions: (
 @import "partials/global/functions";
 @import "partials/global/mixins";
 @import "partials/global/extends";
+@import "partials/global/mixins/font";
 //////////////////////////////
 
 //////////////////////////////
 // COMPONENTS
-@import "partials/components/custom-button";
+@import "partials/components/typography";
+@import "partials/components/colors";
 //////////////////////////////
 
 //////////////////////////////

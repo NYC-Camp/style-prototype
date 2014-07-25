@@ -10,3 +10,4 @@ bower_components
 vendor
 export
 *.gem
+.DS_Store
