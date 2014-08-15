@@ -1,10 +1,14 @@
 class: base--STYLED
 colors: 5
+
 images:
-  - http://www.placecage.com/c/500/300: Crazy Cage
-  - images/waiting.gif: Cookie Waiting
-  - images/charge.gif: Napoleon Charging on a Penguin
-  - http://www.placecage.com/1920/1080: Calm Cage
+  - images/pattern01.jpg: Decorative screen
+  - images/pattern02.jpg: Decorative screen
+  - images/pattern03.jpg: Black and white
+  - images/pattern04.jpg: Blue tint
+  - images/icon_druplicon_blue_dark.svg: Solid icon
+  - images/pattern05.png: Partner ad
+  - images/pattern06.png: Partner ad
 descriptors:
   - Oh Wow
   - Such Movement
