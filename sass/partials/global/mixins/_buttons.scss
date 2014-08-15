@@ -1,0 +1,42 @@
+// ========================
+// BUTTON MIXIN
+// ========================
+
+
+
+@mixin btn-theme ($btn-color) {
+  background-color: $btn-color;
+  border-color: darken($btn-color, 20%);
+  &:hover {
+    background-color: darken($btn-color, 10%);
+    @include box-shadow(0px, 1px, 1px, darken($btn-color, 10%), inset);
+  }
+  &:active {
+    background-color: lighten($btn-color, 3%);
+    @include box-shadow(0px, 1px, 1px, lighten($btn-color, 30%), inset);
+    position: relative;
+    top: 1px; // 1 px shift when clicking button
+  }
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+}
+
+
+// ------------------------
+// BOX MIXINS (Maybe needs to be placed in the _mixins.scss file since these are more general mixins - not only for buttons)
+// -------------------------
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow( $horiz, $vert, $blur, $spread, $color){
+-webkit-box-shadow: $horiz $vert $blur $spread $color;
+-moz-box-shadow: $horiz $vert $blur $spread $color;
+box-shadow: $horiz $vert $blur $spread $color;
+}

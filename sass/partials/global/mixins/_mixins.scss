@@ -1,0 +1,17 @@
+// ========================
+// FONT SMOOTHING
+// ========================
+
+// Renders icon fonts crisper. Also use on light text on dark background.
+// For more info and usage see: http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

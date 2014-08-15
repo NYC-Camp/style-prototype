@@ -36,20 +36,23 @@ $browser-minimum-versions: (
 
 //////////////////////////////
 // GLOBALS
-@import "partials/global/variables";
-@import "partials/global/functions";
-@import "partials/global/mixins";
-@import "partials/global/extends";
-@import "partials/global/mixins/font";
+@import "partials/global/variables/variables";
+@import "partials/global/functions/functions";
+@import "partials/global/mixins/mixins";
+@import "partials/global/mixins/buttons";
+@import "partials/global/extends/extends";
 //////////////////////////////
 
 //////////////////////////////
 // COMPONENTS
-@import "partials/components/typography";
 @import "partials/components/colors";
+@import "partials/components/typography/font";
+@import "partials/components/typography/typography";
+@import "partials/components/controls";
+@import "partials/components/base--content";
 //////////////////////////////
 
 //////////////////////////////
 // LAYOUTS
-
+@import "partials/layouts/main--navigation"
 //////////////////////////////

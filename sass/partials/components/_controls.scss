@@ -1,0 +1,154 @@
+// ========================
+// CONTROLS
+// ========================
+
+
+
+// ------------------------
+// BUTTONS
+// ------------------------
+
+.base--button,
+.base--alternate--button,
+.base--call-to-action--button,
+.base--inactive--button,
+.base--hollow--button {
+  margin: 1em 0;
+}
+
+.base--button,
+.base--alternate--button,
+.base--call-to-action--button,
+.base--inactive--button,
+.base--hollow--button {
+  @include border-radius(4px); // Vendor prefix mixin for border radius
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+  color: $text-color-light;
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+  font-size: $ms-small;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  padding: 0.75em 1em 0.5em 1em;
+  line-height: $ms-small * 1.25;
+}
+
+// BASE BUTTON
+.base--button {
+  @include btn-theme($btn-default);
+}
+
+// REQUIRED BUTTONS
+// Make required buttons different from regular button
+
+// ALTERNATE BUTTON
+.base--alternate--button {
+  @include btn-theme($btn-alt);
+}
+
+// CALL-TO-ACTION BUTTON
+.base--call-to-action--button {
+  @include btn-theme($btn-action);
+}
+
+// INACTIVE BUTTON
+.base--inactive--button {
+  @include btn-theme($btn-inactive);
+  color: $text-color-medium;
+}
+
+// HOLLOW BUTTON
+.base--hollow--button {
+  @include btn-theme($btn-hollow);
+  color: $text-color-medium;
+}
+
+
+
+// ------------------------
+// CHECKBOXES
+// ------------------------
+
+// Make nicer checkboxes
+
+
+
+// ------------------------
+// RADIO BUTTONS
+// ------------------------
+
+// Make nicer radio buttons
+
+
+
+// ------------------------
+// SELECTOR
+// -------------------------
+
+// Make nicer dropdown selector
+
+
+
+// ------------------------
+// FORMS
+// ------------------------
+
+// LABELS
+.base--label,
+.base--checkbox-label {
+  clear: both;
+  color: $text-color-dark;
+  display: block;
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+  font-size: $ms-small;
+  line-height: $ms-small  * 2.125;
+  font-weight: normal;
+    &:required {
+    color: $alert-color;
+    // font-weight: 800;
+  }
+}
+
+// INPUT
+.base--date-input,
+.base--datetime-input,
+.base--datetime-local-input,
+.base--email-input,
+.base--month-input,
+.base--number-input,
+.base--password-input,
+.base--search-input,
+.base--tel-input,
+.base--text-input,
+.base--time-input,
+.base--url-input,
+.base--week-input,
+.base--textarea {
+  border: 1px solid $border-color-dark;
+  background-color: lighten($border-color-dark, 60%);
+  display: inline-block;
+  &:required {
+    border: 2px solid $border-color-dark;
+  }
+}
+
+
+// BASE FORM
+// .base--FORM {
+//   // Make base form pretty
+// }
+
+
+
+// ------------------------
+// RANGE SLIDER
+// -------------------------
+
+input[type="range"].base--range-input {
+  -webkit-appearance: none !important; /*Needed to reset default slider styles */
+  height: 1em;
+  background: $border-color-dark;
+  margin: auto;
+  @include border-radius(0.5em);
+}
