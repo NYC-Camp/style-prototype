@@ -18,37 +18,7 @@
 
 .base--TEXT a:link,
 .base--TEXT a:visited {
-  color: $text-link-color;
-  text-decoration: none;
-  &:hover,
-  &:active {
-    color: $text-link-color;
-    text-decoration: underline;
-  }
-}
-
-
-
-// BASE HEADING ========================
-
-.base--TEXT h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $main-color-dark;
-  text-rendering: optimizeLegibility;
-  a:link,
-  a:visited {
-  color: $text-link-color;
-  text-decoration: none;
-    &:hover,
-    &:active {
-      color: $text-link-color;
-      text-decoration: underline;
-    }
-  }
+  @extend %a;
 }
 
 .base--TEXT h1,
@@ -112,3 +82,5 @@ h6 {
   list-style-position: outside;
   margin-left: $ms-norm * 2;
 }
+
+

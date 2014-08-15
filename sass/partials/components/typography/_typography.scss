@@ -13,9 +13,7 @@ body {
 }
 
 .base--p {
-	color: $text-color-dark;
-	font-family: "SourceSansProRegular", Helvetica, sans-serif;
-	line-height: $ms-norm * 1.25;
+	@extend %p;
 }
 
 
