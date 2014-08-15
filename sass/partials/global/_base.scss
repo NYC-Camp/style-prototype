@@ -1,0 +1,34 @@
+a {
+  @extend %a;
+}
+
+#{headings()} {
+  color: $main-color-dark;
+  text-rendering: optimizeLegibility;
+  a:link,
+  a:visited {
+  color: $text-link-color;
+  text-decoration: none;
+    &:hover,
+    &:active {
+      color: $text-link-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
