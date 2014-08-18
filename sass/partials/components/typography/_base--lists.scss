@@ -1,0 +1,23 @@
+// ========================
+// LISTS
+// ========================
+
+
+
+.base--ul {
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+	font-size: $ms-norm;
+	line-height: $ms-norm * 1.25;
+	list-style-type: disc;
+	list-style-position: outside;
+	margin-left: $ms-norm * 2;
+}
+
+.base--ol {
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+	font-size: $ms-norm;
+	line-height: $ms-norm * 1.25;
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-left: $ms-norm * 2;
+}

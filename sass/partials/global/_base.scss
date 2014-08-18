@@ -1,3 +1,20 @@
+body {
+    font-family: "SourceSansProRegular", Helvetica, sans-serif;
+    font-size: 16px;
+    // @include debug-vertical-alignment;
+}
+
+p {
+  @extend %p;
+}
+
+em {
+  font-style: italic;;
+}
+strong {
+  font-weight: 800;
+}
+
 a {
   @extend %a;
 }
@@ -17,18 +34,36 @@ a {
   }
 }
 
-h1 {
+#{headings(3)} {
+  font-family: "SourceSansProSemibold", Helvetica, sans-serif;
+  font-weight: 300;
+}
 
+#{headings(4,6)} {
+  font-family: "SourceSansProSemibold", Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  @extend %h1;
 }
 
 h2 {
-
+  @extend %h2;
 }
 
 h3 {
-
+  @extend %h3;
 }
 
 h4 {
+  @extend %h4;
+}
 
+h5 {
+  @extend %h5;
+}
+
+h6 {
+  @extend %h6;
 }
