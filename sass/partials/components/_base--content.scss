@@ -7,9 +7,7 @@
 // BASE PARAGRAPH ========================
 
 .base--TEXT p {
-  color: $text-color-dark;
-  font-family: "SourceSansProRegular", Helvetica, sans-serif;
-  line-height: $ms-norm * 1.25;
+  @extend %p;
 }
 
 
@@ -21,44 +19,32 @@
   @extend %a;
 }
 
-.base--TEXT h1,
-h2,
-h3 {
-  font-family: "SourceSansProLight", Helvetica, sans-serif;
-  font-weight: 300;
-}
 
-.base--TEXT h4,
-h5,
-h6 {
-  font-family: "SourceSansProSemibold", Helvetica, sans-serif;
-  font-weight: 600;
-}
+
+// BASE HEADINGS ========================
 
 .base--TEXT h1 {
-  font-size: $ms-xlrg;
-  line-height: $ms-xlrg * 0.44;
-  margin: 0.62em 0;
+  @extend h1;
 }
 
 .base--TEXT h2 {
-  font-size: $ms-lrg;
-  line-height: $ms-lrg * 0.63;
-  margin: 0.89em 0;
+  @extend h2;
 }
 
 .base--TEXT h3 {
-  font-size: $ms-med;
-  line-height: $ms-med * 0.88;
-  margin: 1.24em 0;
+  @extend h3;
 }
 
-.base--TEXT h4,
-h5,
-h6 {
-  font-size: $ms-norm;
-  line-height: $ms-norm * 1.25;
-  margin: 1.77em 0;
+.base--TEXT h4 {
+  @extend h4;
+}
+
+.base--TEXT h5 {
+  @extend h5;
+}
+
+.base--TEXT h6 {
+  @extend h6;
 }
 
 
@@ -82,5 +68,3 @@ h6 {
   list-style-position: outside;
   margin-left: $ms-norm * 2;
 }
-
-
