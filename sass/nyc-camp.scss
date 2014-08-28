@@ -51,9 +51,10 @@ $browser-minimum-versions: (
 @import "partials/components/typography/base--lists";
 @import "partials/components/controls";
 @import "partials/components/base--content";
+@import "partials/components/main--navigation";
 //////////////////////////////
 
 //////////////////////////////
 // LAYOUTS
-@import "partials/layouts/main--navigation"
+
 //////////////////////////////
