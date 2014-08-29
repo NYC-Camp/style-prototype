@@ -3,47 +3,37 @@
 // ========================
 
 
-
-nav .main--navigation {
+.main--navigation {
   margin: 0;
   padding: 0;
-}
-
-.main--navigation ul {
-  display: block;
-}
-
-.main--navigation ul.logo {
-  float: left;
-  margin: 0 1em 0 0;
-  width: 10em;
-}
-
-.main--navigation ul.left {
-  float: left;
-}
-
-.main--navigation ul.right {
-  float: right;
-}
-
-.main--navigation ul li {
-  display: inline;
-}
-
-.main--navigation ul li:first-child {
-  padding-left: 0;
-}
-
-.main--navigation ul li a {
-  color: $text-link-color;
-  font-family: "SourceSansProRegular", Helvetica, sans-serif;
-  font-size: $ms-norm;
-  line-height: $ms-norm * 1.25;
-  padding: 0 1em 0 0;
-  text-decoration: none;
-}
-
-.main--navigation ul li a:hover {
-  color: darken($text-link-color, 20%);
+  div.logo {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 10em;
+  }
+  .left {
+    display: block;
+    float: left;
+    margin-top: 1.7rem;
+    li {
+      display: inline;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        color: $text-link-color;
+        font-family: "SourceSansProRegular", Helvetica, sans-serif;
+        font-size: $ms-norm;
+        line-height: $ms-norm * 1.25;
+        padding: 0 1em 0 0;
+        text-decoration: none;
+        &:hover {
+          color: darken($text-link-color, 20%);
+        }
+      }
+    }
+  }
+  .base--call-to-action--button {
+    float: right;
+  }
 }
