@@ -3,13 +3,17 @@
 // ========================
 
 
+
 .main--navigation {
   margin: 0;
   padding: 0;
   div.logo {
     float: left;
-    margin: 0 1em 0 0;
-    width: 10em;
+    margin: 0 1rem 0 0;
+    width: 12%;
+    img {
+      width: 100%;
+    }
   }
   .left {
     display: block;
@@ -25,7 +29,7 @@
         font-family: "SourceSansProRegular", Helvetica, sans-serif;
         font-size: $ms-norm;
         line-height: $ms-norm * 1.25;
-        padding: 0 1em 0 0;
+        padding: 0 1rem 0 0;
         text-decoration: none;
         &:hover {
           color: darken($text-link-color, 20%);
@@ -35,5 +39,6 @@
   }
   .base--call-to-action--button {
     float: right;
+    margin-top: 1.3rem;
   }
 }
