@@ -1,0 +1,59 @@
+// ========================
+// MAIN TEASER FRONTPAGE
+// ========================
+
+
+.main-teaser {
+  @include grid-span(10, 2);
+}
+
+._trainings-teaser,
+._summits-teaser,
+._sessions-teaser,
+._sprints-teaser {
+  @include breakpoint(600px) {
+    @include grid-span(10, 2);
+    clear: both;
+  }
+}
+
+.trainings-teaser,
+.summits-teaser,
+.sessions-teaser,
+.sprints-teaser {
+  padding: 0 0 2rem 0;
+  margin-bottom: 0 0 2rem 0;
+  border-bottom: $border-color-light solid 2px;
+}
+
+._odd-left {
+  @include breakpoint(600px) {
+    @include grid-span(7, 2);
+  }
+}
+
+._odd-right {
+  @include breakpoint(600px) {
+    @include grid-span(2, 9);
+  }
+}
+
+._even-left {
+  @include breakpoint(600px) {
+    @include grid-span(2, 2);
+  }
+}
+
+._even-right {
+  @include breakpoint(600px) {
+    @include grid-span(7, 4);
+  }
+}
+
+._even-left img, ._odd-right img {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+
+
