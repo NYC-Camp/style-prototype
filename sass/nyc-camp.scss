@@ -46,6 +46,11 @@ $browser-minimum-versions: (
 //////////////////////////////
 
 //////////////////////////////
+// LAYOUTS
+@import "partials/layouts/layouts";
+//////////////////////////////
+
+//////////////////////////////
 // COMPONENTS
 @import "partials/components/colors";
 @import "partials/components/typography/font";
@@ -53,9 +58,9 @@ $browser-minimum-versions: (
 @import "partials/components/controls";
 @import "partials/components/base--content";
 @import "partials/components/main--navigation";
-@import "partials/components/secondary--navigation--topbar";
-@import "partials/components/teaser--frontpage";
-@import "partials/components/session--schedule--item";
+//@import "partials/components/secondary--navigation--topbar";
+@import "partials/components/teaser-frontpage";
+//@import "partials/components/session--schedule--item";
 //////////////////////////////
 
 //////////////////////////////
