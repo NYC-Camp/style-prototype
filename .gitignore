@@ -11,3 +11,4 @@ vendor
 export
 *.gem
 .DS_Store
+npm-debug.log

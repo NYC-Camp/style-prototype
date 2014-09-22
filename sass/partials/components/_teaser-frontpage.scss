@@ -1,0 +1,108 @@
+// ========================
+// MAIN TEASER FRONTPAGE
+// ========================
+
+
+
+._main-teaser {
+  @extend %twelve-one--no-gutter;
+  h1 {
+    @include breakpoint(max-width ($large-viewport - 1)) {
+      text-align: center;
+    }
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+._trainings-teaser,
+._summits-teaser,
+._sessions-teaser,
+._sprints-teaser {
+  @extend %twelve-one--no-gutter;
+  @include breakpoint($large-viewport) {
+    @include grid-span(10, 2);
+    clear: both;
+  }
+}
+
+._training-icon,
+._summit-icon,
+._session-icon,
+._sprint-icon {
+  img {
+    width: 100%;
+  }
+}
+
+._training-icon {
+  @extend %teaser-icon-base;
+  @extend %odd-right;
+}
+
+._summit-icon {
+  @extend %teaser-icon-base;
+  @extend %even-left;
+}
+
+._session-icon {
+  @extend %teaser-icon-base;
+  @extend %odd-right;
+}
+
+._sprint-icon {
+  @extend %teaser-icon-base;
+  @extend %even-left;
+  clear: right;
+}
+
+._training-info {
+  @extend %twelve-one--no-gutter;
+  @extend %odd-left;
+}
+
+._summits-info {
+  @extend %twelve-one--no-gutter;
+  @extend %even-right;
+}
+
+._sessions-info {
+  @extend %twelve-one--no-gutter;
+  @extend %odd-left;
+}
+
+._sprints-info {
+  @extend %twelve-one--no-gutter;
+  @extend %even-right;
+}
+
+._teaser-cta {
+  @include breakpoint(max-width ($large-viewport - 1)) {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.more-info {
+  text-align: center;
+  @include breakpoint($large-viewport) {
+    text-align: right;
+  }
+}
+
+.trainings-teaser,
+.summits-teaser,
+.sessions-teaser,
+.sprints-teaser {
+  padding: 0 0 1.8rem 0;
+  margin-bottom: 2rem;
+  border-bottom: $border-color-light solid 2px;
+}
+
+
+
+
+
+
