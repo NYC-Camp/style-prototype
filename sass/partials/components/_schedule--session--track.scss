@@ -1,0 +1,49 @@
+.session--track {
+  font-size: $ms-small;
+  color: white;
+  padding: 0.3em 0.3em 0.15em 0.3em;
+  .business-strategy-commerce {
+    @extend .session--track;
+    background-color: $business-strategy-commerce;
+  }
+  .coding-development {
+    @extend .session--track;
+    background-color: $coding-development;
+  }
+  .community {
+    @extend .session--track;
+    background-color: $community;
+  }
+  .core-conversations {
+    @extend .session--track;
+    background-color: $core-conversations;
+  }
+  .devops {
+    @extend .session--track;
+    background-color: $devops;
+  }
+  .frontend-untied {
+    @extend .session--track;
+    background-color: $frontend-untied;
+  }
+  .get-off-the-island {
+    @extend .session--track;
+    background-color: $get-off-the-island;
+  }
+  .multilingual {
+    @extend .session--track;
+    background-color: $multilingual;
+  }
+  .new-to-drupal {
+    @extend .session--track;
+    background-color: $new-to-drupal;
+  }
+  .project-management {
+    @extend .session--track;
+    background-color: $project-management;
+  }
+  .site-building {
+    @extend .session--track;
+    background-color: $site-building;
+  }
+}
