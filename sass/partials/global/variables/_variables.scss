@@ -3,43 +3,58 @@
 // ========================
 
 // SOLID COLORS
-$main-color-base: #5091CD;
-$main-color-dark: #023E6B;
-$main-color-light: #A7C8E6;
-$main-color-extralight: #E6EEFF;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-grey: #999999;
+$main-color-base: hsla(209, 56%, 56%, 1);
+$main-color-dark: hsla(206, 96%, 21%, 1);
+$main-color-light: hsla(209, 56%, 78%, 1);
+$main-color-extralight: hsla(221, 100%, 95%, 1);
+$color-black: hsla(0, 0%, 0%, 1);
+$color-white: hsla(0, 100%, 100%, 1);
+$color-grey: hsla(0, 0%, 60%, 1);
 
 // GRADIENT COLORS
 // ...TBD if necessary
 
 // TEXT COLORS
-$text-color-dark: #303133;
-$text-color-medium: #666F80;
-$text-color-light: #EFF0F2;
+$text-color-dark: hsla(220, 3%, 19%, 1);
+$text-color-medium: hsla(219, 11%, 45%, 1);
+$text-color-light: hsla(220, 10%, 94%, 1);
 
 // LINK COLORS
-$text-link-color: #5091CD;
-$text-link-color-light: #EFF0F2;
+$text-link-color: hsla(209, 56%, 56%, 1);
+$text-link-color-light: hsla(220, 10%, 94%, 1);
 
-// Border Colors
-$border-color-light: #CCCCCC;
-$border-color-dark: #666666;
+// BORDER COLORS
+$border-color-light: hsla(0, 0%, 80%, 1);
+$border-color-dark: hsla(0, 0%, 40%, 1);
 
 // BUTTON COLORS
-$btn-default: rgba(114,114,114,1);
-$btn-alt: rgba(80,145,205,1);
-$btn-inactive: rgba(238,238,238,1);
-$btn-action: rgba(150,205,85,1);
-$btn-required: rgba(234,190,50,1);
-$btn-hollow: rgba(255,255,255,1);
+$btn-default: hsla(0, 0%, 45%, 1);
+$btn-alt: hsla(209, 56%, 56%, 1);
+$btn-inactive: hsla(0, 0%, 93%, 1);
+$btn-action: hsla(88, 55%, 57%, 1);
+$btn-required: hsla(46, 81%, 56%, 1);
+$btn-hollow: hsla(0, 100%, 100%, 1);
 
 // ALERT COLORS
-$alert-color: #F04124;
-$success-color: #43AC6A;
-$warning-color: #F08A24;
-$info-color: #A0D3E8;
+$alert-color: hsla(9, 87%, 54%, 1);
+$success-color: hsla(142, 44%, 47%, 1);
+$warning-color: hsla(30, 87%, 54%, 1);
+$info-color: hsla(198, 61%, 77%, 1);
+
+// TRACK COLORS
+// Color variables for session tracks
+// Need to fine tune colors
+$business-strategy-commerce: hsla(120, 100%, 30%, 1);
+$coding-development: hsla(50, 100%, 30%, 1);
+$community: hsla(235, 100%, 80%, 1);
+$core-conversations: hsla(220, 100%, 30%, 1);
+$devops: hsla(300, 100%, 30%, 1);
+$frontend-untied: hsla(10, 100%, 20%, 1);
+$get-off-the-island: hsla(30, 100%, 50%, 1);
+$multilingual: hsla(145, 100%, 80%, 1);
+$new-to-drupal: hsla(270, 100%, 30%, 1);
+$project-management: hsla(35, 100%, 80%, 1);
+$site-building: hsla(180, 100%, 30%, 1);
 
 
 
@@ -47,10 +62,11 @@ $info-color: #A0D3E8;
 // FONT SIZE MODULAR SCALE
 // ========================
 
+// Augmented foruth 1:1.414
 $ms-base: 1em;
 $ms-ratio: $augmented-fourth; // 1.414
 
-$ms-xsmall: ms(-2);
+$ms-xsmall: ms(-1);
 $ms-small: ms(-1);
 $ms-norm: ms(0); // base
 $ms-med: ms(1);

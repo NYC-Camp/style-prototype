@@ -2,29 +2,36 @@
 // FONTS
 //
 
-// @include font-face("SourceSansLight",
-//   font-files("sourcesanspro/sourcesanspro-light-webfont.eot", "sourcesanspro/sourcesanspro-light-webfont.woff", "sourcesanspro/sourcesanspro-light-webfont.ttf"));
 
-// @include font-face("SourceSansProRegular",
-//   font-files("sourcesanspro/sourcesanspro-regular-webfont.eot", "sourcesanspro/sourcesanspro-regular-webfont.woff", "sourcesanspro/sourcesanspro-regular-webfont.ttf"));
+@include font-face("SourceSansProLight", (
+ 'eot': 'sourcesanspro/sourcesanspro-light-webfont.eot',
+ 'woff': 'sourcesanspro/sourcesanspro-light-webfont.woff',
+ 'ttf': 'sourcesanspro/sourcesanspro-light-webfont.ttf',
+ 'otf': 'sourcesanspro/sourcesanspro-light-webfont.otf',
+ 'svg': 'sourcesanspro/sourcesanspro-light-webfont.svg'
+));
 
-// @include font-face("SourceSansProSemibold",
-//   font-files("sourcesanspro/sourcesanspro-semibold-webfont.eot", "sourcesanspro/sourcesanspro-semibold-webfont.woff", "sourcesanspro/sourcesanspro-semibold-webfont.ttf"));
+@include font-face("SourceSansProRegular", (
+ 'eot': 'sourcesanspro/sourcesanspro-regular-webfont.eot',
+ 'woff': 'sourcesanspro/sourcesanspro-regular-webfont.woff',
+ 'ttf': 'sourcesanspro/sourcesanspro-regular-webfont.ttf',
+ 'otf': 'sourcesanspro/sourcesanspro-regular-webfont.otf',
+ 'svg': 'sourcesanspro/sourcesanspro-regular-webfont.svg'
+));
 
-// @include font-face("SourceSansProBold",
-//     font-files("sourcesanspro/sourcesanspro-bold-webfont.eot", "sourcesanspro/sourcesanspro-bold-webfont.woff", "sourcesanspro/sourcesanspro-bold-webfont.ttf"));
+@include font-face("SourceSansProSemibold", (
+ 'eot': 'sourcesanspro/sourcesanspro-semibold-webfont.eot',
+ 'woff': 'sourcesanspro/sourcesanspro-semibold-webfont.woff',
+ 'ttf': 'sourcesanspro/sourcesanspro-semibold-webfont.ttf',
+ 'otf': 'sourcesanspro/sourcesanspro-semibold-webfont.otf',
+ 'svg': 'sourcesanspro/sourcesanspro-semibold-webfont.svg'
+));
 
+@include font-face("SourceSansProBold", (
+ 'eot': 'sourcesanspro/sourcesanspro-bold-webfont.eot',
+ 'woff': 'sourcesanspro/sourcesanspro-bold-webfont.woff',
+ 'ttf': 'sourcesanspro/sourcesanspro-bold-webfont.ttf',
+ 'otf': 'sourcesanspro/sourcesanspro-bold-webfont.otf',
+ 'svg': 'sourcesanspro/sourcesanspro-bold-webfont.svg'
+));
 
-
-
-// @include font-face("SourceSansLight",
-//   font-files("sourcesanspro-light-webfont.eot", "sourcesanspro-light-webfont.woff", "sourcesanspro-light-webfont.ttf"));
-
-// @include font-face("SourceSansProRegular",
-//   font-files("sourcesanspro-regular-webfont.eot", "sourcesanspro-regular-webfont.woff", "sourcesanspro-regular-webfont.ttf"));
-
-// @include font-face("SourceSansProSemibold",
-//   font-files("sourcesanspro-semibold-webfont.eot", "sourcesanspro-semibold-webfont.woff", "sourcesanspro-semibold-webfont.ttf"));
-
-// @include font-face("SourceSansProBold",
-//     font-files("sourcesanspro-bold-webfont.eot", "sourcesanspro-bold-webfont.woff", "sourcesanspro-bold-webfont.ttf"));
