@@ -2,20 +2,34 @@
 // MAIN TEASER FRONTPAGE
 // ========================
 
-
-
-._main-teaser {
-  @extend %twelve-one--no-gutter;
-  h1 {
-    @include breakpoint(max-width ($large-viewport - 1)) {
-      text-align: center;
-    }
-  }
-  p {
-    margin-bottom: 1.5rem;
+%teaser-headers {
+  @include breakpoint(max-width ($large-viewport - 1)) {
+    text-align: center;
   }
 }
 
+._teaser-header,
+._teaser-main,
+._teaser-footer {
+  @extend %twelve-one--no-gutter;
+}
+
+.teaser--h1 {
+  @extend %teaser-headers;
+}
+
+.teaser--h2 {
+  @extend %teaser-headers;
+  margin: 0.6rem 0;
+}
+
+.teaser--h3 {
+  @extend %teaser-headers;
+  margin: 0.6em 0;
+}
+
+._teaser-header-inner-wrapper,
+._teaser-footer-inner-wrapper,
 ._trainings-teaser,
 ._summits-teaser,
 ._sessions-teaser,
@@ -27,37 +41,44 @@
   }
 }
 
-._training-icon,
-._summit-icon,
-._session-icon,
-._sprint-icon {
+._teaser-header-copy,
+._teaser-footer-copy {
+  @include breakpoint($large-viewport) {
+    @include grid-span(10, 2);
+  }
+}
+
+._trainings-icon,
+._summits-icon,
+._sessions-icon,
+._sprints-icon {
   img {
     width: 100%;
   }
 }
 
-._training-icon {
+._trainings-icon {
   @extend %teaser-icon-base;
   @extend %odd-right;
 }
 
-._summit-icon {
+._summits-icon {
   @extend %teaser-icon-base;
   @extend %even-left;
 }
 
-._session-icon {
+._sessions-icon {
   @extend %teaser-icon-base;
   @extend %odd-right;
 }
 
-._sprint-icon {
+._sprints-icon {
   @extend %teaser-icon-base;
   @extend %even-left;
   clear: right;
 }
 
-._training-info {
+._trainings-info {
   @extend %twelve-one--no-gutter;
   @extend %odd-left;
 }
@@ -85,6 +106,25 @@
   }
 }
 
+._summits-list,
+._sprint-list {
+  @extend %twelve-one--no-gutter;
+  @extend %even-right;
+  clear: both;
+}
+
+.summits-list,
+.sprint-list {
+  ul {
+    list-style-type: circle;
+    padding-left: 4%;
+    li {
+      margin-bottom: .5rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+
 .more-info {
   text-align: center;
   @include breakpoint($large-viewport) {
@@ -92,17 +132,16 @@
   }
 }
 
+.teaser-header-inner-wrapper,
 .trainings-teaser,
 .summits-teaser,
 .sessions-teaser,
 .sprints-teaser {
-  padding: 0 0 1.8rem 0;
+  padding-bottom: 1.8rem;
   margin-bottom: 2rem;
-  border-bottom: $border-color-light solid 2px;
+  border-bottom: $border-color-light solid 1px;
 }
 
-
-
-
-
-
+.teaser-footer {
+  padding-bottom: 2rem;
+}

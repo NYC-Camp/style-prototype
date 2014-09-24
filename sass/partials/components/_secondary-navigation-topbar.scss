@@ -1,0 +1,149 @@
+// ========================
+// SECONDARY NAVIGATION TOP BAR
+// ========================
+
+
+
+.top--bar {
+  background: none repeat scroll 0 0 $main-color-dark;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 0;
+  overflow: visible;
+  position: relative;
+}
+
+.top--bar .title--area {
+  float: left;
+  margin: 0;
+  position: relative;
+}
+
+.top--bar .toggle--topbar .menu--icon {
+  margin-top: -16px;
+  top: 50%;
+}
+.top--bar .toggle--topbar {
+  display: none;
+}
+
+.top--bar ul {
+  list-style: none outside none;
+  margin-bottom: 0;
+}
+
+.top--bar .name h1 {
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+  font-size: $ms-norm;
+  line-height: 45px;
+  margin: 0;
+  a {
+    color: $text-link-color-light;
+    display: block;
+    font-weight: normal;
+    padding: 0 15px;
+  }
+}
+
+.top--bar--section {
+  left: 0 !important;
+  position: relative;
+  transition: left 300ms ease-out 0s;
+  width: auto;
+  background: none repeat scroll 0 0 #008cba;
+  color: $text-color-light;
+  line-height: 45px;
+  padding: 0 15px;
+}
+
+.top--bar--section ul {
+  display: inline;
+    height: auto !important;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    li {
+      float: left;
+    }
+    li > a {
+      color: $text-link-color-light;
+      display: block;
+      font-family: "SourceSansProRegular", Helvetica, sans-serif !important;
+      font-size: $ms-small;
+      font-weight: normal;
+      text-transform: none;
+      width: 100%;
+    }
+}
+
+.top--bar--section .has--dropdown {
+    position: relative;
+}
+
+.top--bar--section .has--dropdown > a:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(255, 255, 255, 0.4) transparent transparent;
+    border-image: none;
+    border-right: 5px inset transparent;
+    border-style: solid inset inset;
+    border-width: 5px;
+    content: "";
+    display: block;
+    height: 0;
+    margin-top: -2.5px;
+    top: 22.5px;
+    width: 0;
+}
+
+.top--bar--section .dropdown {
+    background: none repeat scroll 0 0 transparent;
+    clip: rect(1px, 1px, 1px, 1px);
+    display: block;
+    height: 1px;
+    left: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    top: 0;
+    width: 1px;
+    z-index: 99;
+}
+
+.top--bar--section .dropdown {
+    left: 0;
+    min-width: 100%;
+    top: auto;
+}
+
+.top--bar--section .right li .dropdown {
+    left: auto;
+    right: 0;
+}
+
+.navbar--form {
+  display:flex;
+  position:realtive;
+}
+
+.navbar--form>input,
+.navbar--form>button {
+  display:block;
+  // color:red;
+}
+
+.navbar--form>input {
+  flex:1;
+  padding:0.6rem;
+  border:0.2rem ;
+}
+
+.right {
+    float: right !important;
+}
+
+.left {
+  float:  left !important;
+}

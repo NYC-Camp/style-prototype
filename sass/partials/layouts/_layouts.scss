@@ -1,4 +1,10 @@
+// GRID DEBUGGING CODE
+//
+// @include sgs-change('debug', true);
 
+// html {
+//   @include background-grid($color: blue);
+// }
 
 %twelve-one--no-gutter {
   @include grid-span(12, 1, $gutter: 0);
