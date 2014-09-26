@@ -2,18 +2,39 @@
 // MAIN TEASER FRONTPAGE
 // ========================
 
+%teaser-headers {
+  @include breakpoint(max-width ($large-viewport - 1)) {
+    text-align: center;
+  }
+}
 
-
-._main-teaser {
+._teaser-header,
+._teaser-main,
+._teaser-footer {
   @extend %twelve-one--no-gutter;
-  h1 {
-    @include breakpoint(max-width ($large-viewport - 1)) {
-      text-align: center;
-    }
+}
+
+.teaser-header,
+.teaser-main,
+.teaser-footer {
+  padding: {
+    right: 2%;
+    left: 2%;
   }
-  p {
-    margin-bottom: 1.5rem;
-  }
+}
+
+.teaser--h1 {
+  @extend %teaser-headers;
+}
+
+.teaser--h2 {
+  @extend %teaser-headers;
+  margin: 0.6rem 0;
+}
+
+.teaser--h3 {
+  @extend %teaser-headers;
+  margin: 0.6em 0;
 }
 
 ._trainings-teaser,
@@ -27,37 +48,49 @@
   }
 }
 
-._training-icon,
-._summit-icon,
-._session-icon,
-._sprint-icon {
+._trainings-icon,
+._summits-icon,
+._sessions-icon,
+._sprints-icon {
   img {
     width: 100%;
   }
 }
 
-._training-icon {
+._teaser-header-inner-wrapper {
+  @include breakpoint($large-viewport) {
+    @include grid-span(10, 2);
+  }
+}
+
+._teaser-footer-inner-wrapper {
+  @include breakpoint($large-viewport) {
+    @include grid-span(9, 3);
+  }
+}
+
+._trainings-icon {
   @extend %teaser-icon-base;
   @extend %odd-right;
 }
 
-._summit-icon {
+._summits-icon {
   @extend %teaser-icon-base;
   @extend %even-left;
 }
 
-._session-icon {
+._sessions-icon {
   @extend %teaser-icon-base;
   @extend %odd-right;
 }
 
-._sprint-icon {
+._sprints-icon {
   @extend %teaser-icon-base;
   @extend %even-left;
   clear: right;
 }
 
-._training-info {
+._trainings-info {
   @extend %twelve-one--no-gutter;
   @extend %odd-left;
 }
@@ -85,6 +118,25 @@
   }
 }
 
+._summits-list,
+._sprint-list {
+  @extend %twelve-one--no-gutter;
+  @extend %even-right;
+  clear: both;
+}
+
+.summits-list,
+.sprint-list {
+  ul {
+    list-style-type: circle;
+    padding-left: 4%;
+    li {
+      margin-bottom: .5rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+
 .more-info {
   text-align: center;
   @include breakpoint($large-viewport) {
@@ -92,17 +144,13 @@
   }
 }
 
+.teaser-header,
 .trainings-teaser,
 .summits-teaser,
 .sessions-teaser,
 .sprints-teaser {
-  padding: 0 0 1.8rem 0;
+  padding-bottom: 1.8rem;
   margin-bottom: 2rem;
-  border-bottom: $border-color-light solid 2px;
+  border-bottom: $border-color-light solid 1px;
 }
-
-
-
-
-
 
