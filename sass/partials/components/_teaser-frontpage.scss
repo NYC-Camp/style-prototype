@@ -44,6 +44,9 @@
 ._teaser-header-copy,
 ._teaser-footer-copy {
   @include breakpoint($large-viewport) {
+    @include grid-span(12, 1);
+  }
+  @include breakpoint(1260px) {
     @include grid-span(10, 2);
   }
 }
