@@ -1,0 +1,26 @@
+// ========================
+// SESSION SCHEDULE LIST
+// ========================
+
+
+
+._schedule--list {
+  @include grid-span(10, 2);
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+}
+
+.schedule--list {
+  color: $text-color-medium;
+  h4 {
+    @include grid-span(2, 1);
+  }
+}
+
+._session--list {
+  @include grid-span(6, 3);
+}
+
+._session--details {
+  @include grid-span(2, 9);
+}
+
