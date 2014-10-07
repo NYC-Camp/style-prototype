@@ -1,0 +1,48 @@
+// ========================
+// SESSION SCHEDULE GRID
+// ========================
+
+
+
+._schedule--grid {
+  @include grid-span(10, 2);
+}
+
+.schedule--grid {
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+  .schedule--time {
+    @include grid-span(2, 1);
+    @extend h4;
+    color: $text-color-dark;
+  }
+}
+
+._session--grid {
+  @include grid-span(3, 3);
+}
+
+// .session--grid {
+
+// }
+
+.session--title {
+  margin: 0.25em 0;
+  line-height: $ms-norm * 1.25;
+}
+
+.session--speaker--details {
+  margin: 0.25em 0;
+}
+
+//.session--track,
+.session--speaker,
+.session--speaker--affiliation,
+.session--level,
+.session--room {
+  font-size: $ms-small;
+  color: $text-color-medium;
+}
+
+.label {
+  font-weight: 800;
+}

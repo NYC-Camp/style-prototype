@@ -19,6 +19,12 @@ $text-color-dark: hsla(220, 3%, 19%, 1);
 $text-color-medium: hsla(219, 11%, 45%, 1);
 $text-color-light: hsla(220, 10%, 94%, 1);
 
+// TEXT COLORS DISTINCTIONS
+// Use these colors to distinct text from base text
+$text-color-distinct-max: hsla(9, 87%, 54%, 1);
+$text-color-distinct-med: hsla(105, 87%, 26%, 1);
+$text-color-distinct-low: hsla(206, 21%, 42%, 1);
+
 // LINK COLORS
 $text-link-color: hsla(209, 56%, 56%, 1);
 $text-link-color-light: hsla(220, 10%, 94%, 1);
@@ -31,7 +37,7 @@ $border-color-dark: hsla(0, 0%, 40%, 1);
 $btn-default: hsla(0, 0%, 45%, 1);
 $btn-alt: hsla(209, 56%, 56%, 1);
 $btn-inactive: hsla(0, 0%, 93%, 1);
-$btn-action: hsla(88, 55%, 57%, 1);
+$btn-action: hsla(329, 100%, 44%, 1);
 $btn-required: hsla(46, 81%, 56%, 1);
 $btn-hollow: hsla(0, 100%, 100%, 1);
 
@@ -45,15 +51,15 @@ $info-color: hsla(198, 61%, 77%, 1);
 // Color variables for session tracks
 // Need to fine tune colors
 $business-strategy-commerce: hsla(120, 100%, 30%, 1);
-$coding-development: hsla(50, 100%, 30%, 1);
+$coding-development: hsla(50, 60%, 25%, 1);
 $community: hsla(235, 100%, 80%, 1);
 $core-conversations: hsla(220, 100%, 30%, 1);
 $devops: hsla(300, 100%, 30%, 1);
 $frontend-untied: hsla(10, 100%, 20%, 1);
 $get-off-the-island: hsla(30, 100%, 50%, 1);
-$multilingual: hsla(145, 100%, 80%, 1);
+$multilingual: hsla(303, 39%, 63%, 1);
 $new-to-drupal: hsla(270, 100%, 30%, 1);
-$project-management: hsla(35, 100%, 80%, 1);
+$project-management: hsla(35, 53%, 46%, 1);
 $site-building: hsla(180, 100%, 30%, 1);
 
 
