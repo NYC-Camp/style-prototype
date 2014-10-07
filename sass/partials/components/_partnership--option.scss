@@ -1,0 +1,71 @@
+// ========================
+// PARTNERSHIP OPTION
+// ========================
+
+
+._partnership--option {
+  @include grid-span(10, 2);
+}
+
+.partnership--option {
+  color: $text-color-dark;
+  font-family: "SourceSansProRegular", Helvetica, sans-serif;
+  margin-bottom: 2rem;
+}
+
+._partnership--option--list--head {
+  @include grid-span(3, 1);
+}
+
+.partnership--option--list--head {
+  font-weight: 800;
+  font-size: $ms-med;
+  text-align: right;
+    .partnership--level {
+    color: $main-color-dark;
+    display: block;
+    padding: 0.3rem 0 0.3rem 0;
+  }
+  .partnership--amount {
+    color: $text-color-distinct-med;
+    display: block;
+  }
+}
+
+._partnership--option--list {
+  @include grid-span(9, 4);
+}
+
+.partnership--option--list {
+  // display: block;
+  border-left: 3px $border-color-light solid;
+  height: 100%;
+  padding-left: 1rem;
+  font-size: $ms-norm;
+  li {
+    border-bottom: $border-color-light 1px dotted;
+    clear: both;
+    overflow: hidden;
+    padding: 0.5rem 0 0.3rem 0;
+      &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// .option {
+
+// }
+
+._option--body,
+._partnership--option--sign-up {
+  @include grid-span(9, 4);
+}
+
+.option--title {
+  color: $main-color-dark;
+  font-weight: 800;
+}
+.option--body {
+  color: $text-color-medium;
+}
