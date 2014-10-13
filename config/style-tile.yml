@@ -7,8 +7,11 @@ images:
   - images/pattern03.jpg: Black and white
   - images/pattern04.jpg: Blue tint
   - images/icon_druplicon_blue_dark.svg: Solid icon
-  - images/pattern05.png: Partner ad
-  - images/pattern06.png: Partner ad
+  - images/logo-sample_Lead.svg: Lead partner logo
+  - images/logo-sample_Core.svg: Core partner logo
+  - images/logo-sample_Contribute.svg: Contributing partner logo
+  - images/logo-sample_Support.svg: Supporting partner logo
+  - images/logo-sample_Community.svg: Community partner logo
 descriptors:
   - Oh Wow
   - Such Movement

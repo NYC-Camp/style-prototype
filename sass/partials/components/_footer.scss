@@ -1,0 +1,125 @@
+// ========================
+// FOOTER PARTNER & EXTENTION
+// ========================
+
+// !!! Still need to make this footer responsive (mobile) !!!
+
+._footer {
+  @include grid-span(10, 2); // Regular 12 column grid
+}
+
+.footer {
+  border-top: 2px $border-color-light solid;
+  h3 {
+    font-weight: 800;
+  }
+}
+
+._partner--container {
+  @include grid-span(26, 1, (26)); // Nested 26 columns grid for logos so margins and gutters are not so wide
+}
+
+.partner--container {
+  background-color: $main-color-light;
+  background-image: url("/images/bg_stripe.png");
+  padding-bottom: 2rem;
+}
+
+.partner--level {
+  @include grid-span(26, 2, (26));
+  font-weight: 800;
+}
+
+._partner--logo--list,
+._partner--logo--size {
+  @include grid-span(26, 1, (26));
+}
+
+// .partner-logo--list {
+//   // Some styling here
+// }
+
+.partner-logo--size {
+  list-style-type: none;
+  clear: both;
+  padding-bottom: 0.75rem;
+}
+
+.x-large {
+  background: white;
+  clear: both;
+  height: auto;
+  &:nth-of-type(1) {
+    @include grid-span(8, 2, (26));
+  }
+  &:nth-of-type(2) {
+    @include grid-span(8, 10, (26));
+  }
+  &:nth-of-type(3) {
+    @include grid-span(8, 18, (26));
+  }
+}
+
+.large {
+  background: white;
+  clear: both;
+  height: auto;
+  &:nth-of-type(1) {
+    @include grid-span(6, 2, (26));
+  }
+  &:nth-of-type(2) {
+    @include grid-span(6, 8, (26));
+  }
+  &:nth-of-type(3) {
+    @include grid-span(6, 14, (26));
+  }
+  &:nth-of-type(4) {
+    @include grid-span(6, 20, (26));
+  }
+}
+
+.small {
+  background: white;
+  clear: both;
+  height: auto;
+  &:nth-of-type(1) {
+    @include grid-span(4, 2, (26));
+  }
+  &:nth-of-type(2) {
+    @include grid-span(4, 6, (26));
+  }
+  &:nth-of-type(3) {
+    @include grid-span(4, 10, (26));
+  }
+  &:nth-of-type(4) {
+    @include grid-span(4, 14, (26));
+  }
+  &:nth-of-type(5) {
+    @include grid-span(4, 18, (26));
+  }
+  &:nth-of-type(6) {
+    @include grid-span(4, 22, (26));
+  }
+}
+
+._footer--extention {
+  @include grid-span(26, 1, (26));
+}
+
+.footer--extention {
+  background-color: $main-color-dark;
+  padding: 1rem 0;
+  .footer--social {
+  @include grid-span(12, 2, (26));
+  // background-color:red;
+  color: $text-color-light;
+  }
+  .footer--legal {
+  @include grid-span(12, 14, (26));
+  // background-color:yellow;
+  color: $text-color-light;
+  }
+}
+
+
+
