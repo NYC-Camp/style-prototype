@@ -58,15 +58,25 @@ $browser-minimum-versions: (
 @import "partials/components/controls";
 @import "partials/components/base--content";
 @import "partials/components/main--navigation";
+<<<<<<< HEAD
 @import "partials/components/secondary--navigation--topbar--simple";
 @import "partials/components/secondary-navigation-topbar";
+=======
+// <<<<<<< HEAD
+// @import "partials/components/secondary--navigation--topbar--simple";
+// @import "partials/components/secondary--navigation--topbar";
+// =======
+@import "partials/components/secondary-navigation-topbar";
+// >>>>>>> upstream/master
+>>>>>>> Adresses #11, footer organism -- also added placeholder logos to style-tile (just for fun)
 @import "partials/components/teaser-frontpage";
-//@import "partials/components/session--schedule--item";
+// @import "partials/components/session--schedule--item";
 @import "partials/components/schedule--session--grid";
 @import "partials/components/schedule--session--list";
 @import "partials/components/schedule--session--track";
 @import "partials/components/partnership--option";
-@import "partials/components/block";
+@import "partials/components/footer";
+
 //////////////////////////////
 
 //////////////////////////////
