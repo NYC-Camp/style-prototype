@@ -1,0 +1,101 @@
+// ========================
+// MASTHEAD
+// ========================
+
+
+
+%masthead-headers {
+  @include breakpoint(max-width ($large-viewport - 1)) {
+    text-align: left;
+  }
+}
+
+.masthead {
+  @include grid-span(12, 1);
+  // @include background-image(radial-gradient(10px 10px, $main-color-light 50px, $main-color-base 550px)); // background radial gradient
+  // background: $main-color-base url("/images/nycc_masthead_alt.jpg") no-repeat center center; // background alternate image
+  background: $main-color-base url("/images/nycc_masthead.png") no-repeat center center;
+}
+
+._masthead-inner-wrapper {
+  @extend %twelve-one--no-gutter;
+  @include breakpoint($large-viewport) {
+    @include grid-span(10, 2);
+    padding: 4rem 0;
+    clear: both;
+  }
+}
+
+.masthead-inner-wrapper {
+  padding: 1.8rem 0;
+}
+
+._masthead-copy {
+  @include grid-span(7, 1);
+}
+
+.masthead-copy {
+  p {
+    color: $text-color-light;
+    font-size: $ms-med;
+  }
+}
+
+.cta--newsletter {
+  border-top: 2px $text-color-light solid;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 0 0;
+  .base--call-to-action--button {
+    margin: 0;
+  }
+  p {
+    font-size: $ms-med;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.masthead--h1,
+.masthead--h2 {
+  @extend %masthead-headers;
+  color: $text-color-light;
+}
+
+._masthead--feed--block {
+  @include grid-span(4, 9);
+}
+
+.masthead--feed--block {
+  background-color: rgba(255,255,255, 0.35);
+  -moz-box-shadow:    3px 3px 8px 1px $main-color-dark;
+  -webkit-box-shadow: 3px 3px 8px 1px $main-color-dark;
+  box-shadow:         3px 3px 8px 1px $main-color-dark;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  h3 {
+    background-color: $main-color-dark;
+    color: $text-color-light;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .feed--copy--first,
+  .feed--copy,
+  .feed--copy--last {
+    border-bottom: 2px $border-color-dark dotted;
+    padding-bottom: 0.75rem;
+  }
+  .feed--copy--first,
+  .feed--copy {
+    margin-bottom: 0.75rem;
+  }
+  a:link,
+  a:visited {
+  color: $text-link-color-distinct;
+  text-decoration: none;
+    &:hover,
+    &:active {
+      color: $text-link-color-distinct;
+      text-decoration: none;
+    }
+  }
+}
