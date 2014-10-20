@@ -1,0 +1,56 @@
+.social {
+  ul {
+    list-style: none outside none;
+  }
+  li {
+    float: left;
+    margin: 0 0.3rem;
+  }
+}
+
+.social--list {
+  background-color: $main-color-dark;
+  height: 3rem;
+  width: 100%;
+  padding: 0.5rem;
+  a:link,
+  a:visited {
+  background-color: $main-color-extralight;
+    &:hover,
+    &:active {
+    background-color: darken($main-color-extralight, 10%);
+    }
+  }
+}
+
+.contact,
+.rss,
+.google,
+.twitter,
+.facebook {
+  border-radius: 100%;
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  text-indent: -9999px;
+}
+
+.contact {
+  background: image-url("social-Email.svg") no-repeat center center;
+}
+
+.rss {
+  background: image-url("social-RSS.svg") no-repeat center center;
+}
+
+.google {
+  background: image-url("social-Google.svg") no-repeat center center;
+}
+
+.twitter {
+  background: image-url("social-Twitter.svg") no-repeat center center;
+}
+
+.facebook {
+  background: image-url("social-Facebook.svg") no-repeat center center;
+}
