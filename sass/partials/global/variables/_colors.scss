@@ -1,0 +1,63 @@
+
+$solid-colors: (
+  main-color-base: hsla(209, 56%, 56%, 1),
+  main-color-dark: hsla(206, 96%, 21%, 1),
+  main-color-light: hsla(209, 56%, 78%, 1),
+  main-color-extralight: hsla(221, 100%, 95%, 1),
+  color-black: hsla(0, 0%, 0%, 1),
+  color-white: hsla(0, 100%, 100%, 1),
+  color-grey: hsla(0, 0%, 60%, 1),
+);
+
+$text-colors: (
+  text-color-dark: hsla(220, 3%, 19%, 1),
+  text-color-medium: hsla(219, 11%, 45%, 1),
+  text-color-light: hsla(220, 10%, 94%, 1),
+);
+
+$text-color-distinctions: (
+  text-color-distinct-max: hsla(9, 87%, 54%, 1),
+  text-color-distinct-med: hsla(105, 87%, 26%, 1),
+  text-color-distinct-low: hsla(206, 21%, 42%, 1),
+);
+
+$link-colors: (
+  text-link-color: hsla(209, 56%, 56%, 1),
+  text-link-color-light: hsla(220, 10%, 94%, 1),
+  text-link-color-distinct: hsla(329, 100%, 44%, 1),
+);
+
+$border-colors: (
+  border-color-light: hsla(0, 0%, 80%, 1),
+  border-color-dark: hsla(0, 0%, 40%, 1),
+);
+
+$button-colors: (
+  btn-default: hsla(0, 0%, 45%, 1),
+  btn-alt: hsla(209, 56%, 56%, 1),
+  btn-inactive: hsla(0, 0%, 93%, 1),
+  btn-action: hsla(329, 100%, 44%, 1),
+  btn-required: hsla(46, 81%, 56%, 1),
+  btn-hollow: hsla(0, 100%, 100%, 1),
+);
+
+$alert-colors: (
+  alert-color: hsla(9, 87%, 54%, 1),
+  success-color: hsla(142, 44%, 47%, 1),
+  warning-color: hsla(30, 87%, 54%, 1),
+  info-color: hsla(198, 61%, 77%, 1),
+);
+
+$track-colors: (
+  business-strategy-commerce: hsla(120, 100%, 30%, 1),
+  coding-development: hsla(50, 60%, 25%, 1),
+  community: hsla(235, 100%, 80%, 1),
+  core-conversations: hsla(220, 100%, 30%, 1),
+  devops: hsla(300, 100%, 30%, 1),
+  frontend-untied: hsla(10, 100%, 20%, 1),
+  get-off-the-island: hsla(30, 100%, 50%, 1),
+  multilingual: hsla(303, 39%, 63%, 1),
+  new-to-drupal: hsla(270, 100%, 30%, 1),
+  project-management: hsla(35, 53%, 46%, 1),
+  site-building: hsla(180, 100%, 30%, 1),
+);
