@@ -4,23 +4,34 @@
 
 
 ._partnership--option {
-  @include grid-span(10, 2);
+  @include breakpoint(740px) {
+    @include grid-span(10, 2);
+  }
 }
 
 .partnership--option {
   color: $text-color-dark;
   font-family: "SourceSansProRegular", Helvetica, sans-serif;
   margin-bottom: 2rem;
+
 }
 
 ._partnership--option--list--head {
-  @include grid-span(3, 1);
+  @include breakpoint(740px) {
+    @include grid-span(3, 1);
+  }
+  @include breakpoint(max-width 739px) {
+    border-bottom: 3px $border-color-light solid;
+    padding-bottom: 10px;
+  }
 }
 
 .partnership--option--list--head {
   font-weight: 800;
   font-size: $ms-med;
-  text-align: right;
+  @include breakpoint(740px) {
+   text-align: right;
+  }
     .partnership--level {
     color: $main-color-dark;
     display: block;
@@ -33,39 +44,61 @@
 }
 
 ._partnership--option--list {
-  @include grid-span(9, 4);
+  @include breakpoint(740px) {
+    @include grid-span(9, 4);
+  }
 }
 
 .partnership--option--list {
-  // display: block;
-  border-left: 3px $border-color-light solid;
+  @include breakpoint(740px) {
+    border-left: 3px $border-color-light solid;
+    padding-left: 1rem;
+  }
   height: 100%;
-  padding-left: 1rem;
+  //
   font-size: $ms-norm;
   li {
     border-bottom: $border-color-light 1px dotted;
     clear: both;
     overflow: hidden;
-    padding: 0.5rem 0 0.3rem 0;
+    padding: 0.6rem 0 0.6rem 0;
       &:last-child {
       border-bottom: none;
     }
   }
 }
 
-// .option {
-
-// }
-
 ._option--body,
 ._partnership--option--sign-up {
-  @include grid-span(9, 4);
+  @include breakpoint(940px) {
+   @include grid-span(9, 4);
+  }
+}
+
+._partnership--option--sign-up {
+  button {
+    @include breakpoint(740px) {
+      margin: {
+        top: 1rem;
+        left: 1.3rem;
+      }
+    }
+  }
 }
 
 .option--title {
   color: $main-color-dark;
   font-weight: 800;
+  display: block;
+  @include breakpoint(940px) {
+   display: inline;
+  }
+  margin-bottom: .5rem;
 }
 .option--body {
   color: $text-color-medium;
+  display: block;
+  @include breakpoint(940px) {
+   display: inline;
+  }
 }
