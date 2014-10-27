@@ -65,26 +65,6 @@ $site-building: hsla(180, 100%, 30%, 1);
 
 
 
-// ========================
-// FONT SIZE MODULAR SCALE
-// ========================
 
-// Augmented foruth 1:1.414
-$ms-base: 1em;
-$ms-ratio: $augmented-fourth; // 1.414
 
-$ms-xsmall: ms(-1);
-$ms-small: ms(-1);
-$ms-norm: ms(0); // base
-$ms-med: ms(1);
-$ms-lrg: ms(2);
-$ms-xlrg: ms(3);
-$ms-xxlrg: ms(4);
-$ms-xxxlrg: ms(5);
 
-// ========================
-// BREAKPOINT
-// ========================
-$breakpoint-to-ems: true;
-
-$large-viewport: 900px;

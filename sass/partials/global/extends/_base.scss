@@ -1,11 +1,20 @@
-%p {
+
+%base--html {
+
+}
+
+%base--body {
+
+}
+
+%base--p {
   color: $text-color-dark;
   font-family: "SourceSansProRegular", Helvetica, sans-serif;
   line-height: $ms-norm * 1.25;
   margin-bottom: .5rem;
 }
 
-%a {
+%base--a {
   color: $text-link-color;
   text-decoration: none;
   &:hover,
@@ -15,37 +24,37 @@
   }
 }
 
-%h1 {
+%base--h1 {
   font-size: $ms-xlrg;
   line-height: $ms-xlrg * 0.44;
   margin: 0.6rem 0;
 }
 
-%h2 {
+%base--h2 {
   font-size: $ms-lrg;
   line-height: $ms-lrg * 0.63;
   margin: 0.89em 0;
 }
 
-%h3 {
+%base--h3 {
   font-size: $ms-med;
   line-height: $ms-med * 0.88;
   margin: 1.24em 0;
 }
 
-%h4 {
+%base--h4 {
   font-size: $ms-norm;
   line-height: $ms-norm * 1.25;
   margin: 1.77em 0;
 }
 
-%h5 {
+%base--h5 {
   font-size: $ms-norm;
   line-height: $ms-norm * 1.25;
   margin: 1.77em 0;
 }
 
-%h6 {
+%base--h6 {
   font-size: $ms-norm;
   line-height: $ms-norm * 1.25;
   margin: 1.77em 0;

@@ -3,35 +3,30 @@
 // ========================
 
 
-
-%masthead-headers {
-  @include breakpoint(max-width ($large-viewport - 1)) {
-    text-align: left;
-  }
-}
-
 .masthead {
-  @include grid-span(12, 1);
-  // @include background-image(radial-gradient(10px 10px, $main-color-light 50px, $main-color-base 550px)); // background radial gradient
-  // background: $main-color-base url("/images/nycc_masthead_alt.jpg") no-repeat center center; // background alternate image
-  background: $main-color-base url("/images/nycc_masthead.png") no-repeat center center;
+  @include clearfix;
+  padding: 6px;
+  background-color: $main-color-base;
+  @include breakpoint(1000px) {
+    background: image-url("nycc_masthead.png");
+    background-size: 118% 100%;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+  }
 }
 
 ._masthead-inner-wrapper {
   @extend %twelve-one--no-gutter;
-  @include breakpoint($large-viewport) {
-    @include grid-span(10, 2);
-    padding: 4rem 0;
+  @include breakpoint(1000px) {
+    padding: 4rem 32px;
     clear: both;
   }
 }
 
-.masthead-inner-wrapper {
-  padding: 1.8rem 0;
-}
-
 ._masthead-copy {
-  @include grid-span(7, 1);
+  @include breakpoint(1000px) {
+    @include grid-span(8, 1);
+  }
 }
 
 .masthead-copy {
@@ -56,12 +51,16 @@
 
 .masthead--h1,
 .masthead--h2 {
-  @extend %masthead-headers;
+  @include breakpoint(max-width (999px)) {
+    text-align: center;
+  }
   color: $text-color-light;
 }
 
 ._masthead--feed--block {
-  @include grid-span(4, 9);
+  @include breakpoint(1000px) {
+    @include grid-span(4, 9);
+  }
 }
 
 .masthead--feed--block {

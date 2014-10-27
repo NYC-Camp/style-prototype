@@ -6,7 +6,7 @@ body {
 }
 
 p {
-  @extend %p;
+  @extend %base--p;
 }
 
 em {
@@ -17,7 +17,7 @@ strong {
 }
 
 a {
-  @extend %a;
+  @extend %base--a;
 }
 
 #{headings()} {
@@ -46,25 +46,25 @@ a {
 }
 
 h1 {
-  @extend %h1;
+  @extend %base--h1;
 }
 
 h2 {
-  @extend %h2;
+  @extend %base--h2;
 }
 
 h3 {
-  @extend %h3;
+  @extend %base--h3;
 }
 
 h4 {
-  @extend %h4;
+  @extend %base--h4;
 }
 
 h5 {
-  @extend %h5;
+  @extend %base--h5;
 }
 
 h6 {
-  @extend %h6;
+  @extend %base--h6;
 }

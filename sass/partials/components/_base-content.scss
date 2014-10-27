@@ -7,7 +7,7 @@
 // BASE PARAGRAPH ========================
 
 .base--TEXT p {
-  @extend %p;
+  @extend %base--p;
 }
 
 
@@ -16,7 +16,7 @@
 
 .base--TEXT a:link,
 .base--TEXT a:visited {
-  @extend %a;
+  @extend %base--a;
 }
 
 

@@ -37,12 +37,11 @@ $browser-minimum-versions: (
 //////////////////////////////
 // GLOBALS
 @import "partials/global/variables/variables";
-@import "partials/global/variables/grid";
+@import "partials/global/variables/";
 @import "partials/global/functions/functions";
 @import "partials/global/mixins/mixins";
 @import "partials/global/mixins/buttons";
-@import "partials/global/extends/extends";
-@import "partials/global/base";
+@import "partials/global/extends";
 //////////////////////////////
 
 //////////////////////////////
@@ -52,21 +51,19 @@ $browser-minimum-versions: (
 
 //////////////////////////////
 // COMPONENTS
+@import "partials/components/base";
 @import "partials/components/colors";
 @import "partials/components/typography/font";
-@import "partials/components/typography/base--lists";
+@import "partials/components/typography/base-lists";
 @import "partials/components/controls";
-@import "partials/components/base--content";
-@import "partials/components/main--navigation";
-//@import "partials/components/secondary--navigation--topbar--simple";
-//@import "partials/components/secondary--navigation--topbar";
+@import "partials/components/base-content";
+@import "partials/components/main-navigation";
 @import "partials/components/secondary-navigation-topbar";
 @import "partials/components/teaser-frontpage";
-//@import "partials/components/session--schedule--item";
-@import "partials/components/schedule--session--grid";
-@import "partials/components/schedule--session--list";
-@import "partials/components/schedule--session--track";
-@import "partials/components/partnership--option";
+@import "partials/components/schedule-session-grid";
+@import "partials/components/schedule-session-list";
+@import "partials/components/schedule-session-track";
+@import "partials/components/partnership-option";
 @import "partials/components/footer";
 @import "partials/components/masthead";
 @import "partials/components/social";
