@@ -1,0 +1,15 @@
+.block--basic {
+  background-color: $main-color-extralight;
+  -moz-box-shadow:    3px 3px 8px 1px $main-color-dark;
+  -webkit-box-shadow: 3px 3px 8px 1px $main-color-dark;
+  box-shadow:         3px 3px 8px 1px $main-color-dark;
+  padding: 0.25rem 1.5rem 1.5rem 1.5rem;
+  h3 {
+    background-color: $main-color-dark;
+    color: $text-color-light;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
